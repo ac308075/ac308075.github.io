@@ -1,0 +1,487 @@
+body {
+    font-family: Microsoft JhengHei;
+}
+
+/*Navbar*/
+@media screen and (min-width: 992px) {
+    .nav-item a {
+        font-size: 14pt;
+    }
+    .dropdown-menu a{
+        font-size: 11pt;
+    }
+}
+@media screen and (max-width:991px){
+    .class-menu {
+        height: 350px;
+        overflow: scroll;
+    }
+
+    .navbar-collapse {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+        .navbar-collapse > .type1:nth-of-type(1) {
+            -webkit-order: 2;
+        }
+
+        .navbar-collapse > .type2:nth-of-type(2) {
+            -webkit-order: 1;
+        }
+    .navbar-brand{
+        width:70%;
+    }
+    .navbar-brand img{
+        width: 70%;
+    }
+}
+
+/*Mega Menu*/
+/*Only for Bootstrap version 4 alpha*/
+.has-mega-menu .container-sm {
+    max-width: 540px;
+}
+
+.has-mega-menu .container-md {
+    max-width: 720px;
+}
+
+.has-mega-menu .container-lg {
+    max-width: 960px;
+}
+
+.has-mega-menu .container-xl {
+    max-width: 1140px;
+}
+
+/*Only for Bootstrap version 4 Beta and up*/
+
+@media screen and (min-width: 576px) {
+    .has-mega-menu .container-sm {
+        width: 540px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .has-mega-menu .container-md {
+        width: 720px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .has-mega-menu .container-lg {
+        width: 960px;
+    }
+
+    .has-mega-menu .container-xl {
+        width: 960px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .has-mega-menu .container-xl {
+        width: 1140px;
+    }
+}
+
+/*輪播圖樣式*/
+.slide-size{
+    padding-bottom:55px;
+}
+/*Navbar固定上方效果*/
+/*針對整體做動畫*/
+* {
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+/*
+          但是全體做動畫有個缺點，當在LOGO裡面做圖的時候，文字隱藏的時候，
+          網站剛讀取會有動畫效果!超像bug的所以如果有在LOGO設圖片，要針對LOGO的地方動畫速度歸 0
+        */
+/*針對 .navbar 作一些我想要的修正*/
+@media screen and (min-width: 992px) {
+    .navbar-scroll.navbar {
+        padding: 10px 0;
+        border-radius: 0px;
+        margin: 0;
+        min-height: 45px;
+        margin-bottom: 3px;
+    }
+}
+@media screen and (max-width: 991px) {
+    .navbar-scroll.navbar {
+        padding: 10px 0;
+        border-radius: 0px;
+        margin: 0;
+    }
+}
+
+
+/*也是針對想要的畫面做修正*/
+.navbar-scroll.navbar-fixed-top {
+    padding: 0px 0;
+}
+
+.navbar-fixed-top {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 1030;
+}
+/*書籍列表區塊*/
+.book_list_box{
+    padding-bottom:30px;
+    padding-top:10px;
+}
+.book_list_top10 {
+    text-align: center;
+    color: #AD5E0E;
+    font-weight:bolder;
+    font-size:15pt;
+}
+/*書籍列表標題*/
+/*
+.o1 {
+    position: relative;
+    padding: 0 0 0.5em 0.7em;
+    border-bottom: 1px solid black;
+    font-size:15pt;
+}
+.o1:after {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    content: '';
+    width: 5px;
+    height: 1em;
+    background-color: #f15a24;
+}*/
+.o1 {
+    position: relative;
+    padding: 0 0 1pt 0.7em;
+    border-bottom: 1px solid #C69C6D;
+    color: #AD5E0E;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+.o1:after {
+    position: absolute;
+    top: 0.2em;
+    left: 0;
+    content: '';
+    width: 5px;
+    height: 1.2em;
+    background-color: #AD5E0E;
+}
+.o1 img{
+    height:15pt;
+}
+.o2 {
+    position: relative;
+    padding: 0 0 1pt 0.7em;
+    border-bottom: 1px solid #2F5791;
+    color: #2F5791;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+
+    .o2:after {
+        position: absolute;
+        top: 0.2em;
+        left: 0;
+        content: '';
+        width: 5px;
+        height: 1.2em;
+        background-color: #2F5791;
+    }
+
+    .o2 img {
+        height: 15pt;
+    }
+
+
+/*看更多*/
+.o3 {
+    color: black;
+    font-size: 14px;
+    float: right;
+    font-weight: bolder;
+}
+
+    .o3:hover {
+        color: #AD5E0E;
+        text-decoration: none;
+    }
+/*標題箭頭*/
+.arrow_right {
+    display: inline-block;
+    border-right: 5px solid;
+    border-bottom: 5px solid;
+    width: 15px;
+    height: 15px;
+    transform: rotate(-45deg);
+}
+/*首頁產品列表*/
+.slider img {
+    margin:0px auto;
+    max-height: 210px;
+    max-width: 145px;
+}
+.slider p{
+    font-size: 14px;
+    margin-bottom:0px;
+}
+.slider a{
+    color:#4D4D4D;
+}
+    .slider a:hover {
+        color: #AD5E0E;
+        text-decoration: none;
+    }
+/*搜尋按鈕*/
+.search-btn{
+    color:#2F5791;
+    padding:5px;
+    font-weight:bolder;
+}
+.search-box :hover {
+    text-decoration: none;
+    border: 1px solid #2F5791;
+}
+.search-box {
+    display: inline-flex;
+    white-space: nowrap;
+}
+@media screen and (max-width: 991px) {
+    .search-box {
+        width: 100%;
+        padding-bottom:10px;
+    }
+}
+/*購物車、會員登入、訂單查詢按鈕*/
+.nav-form-link {
+    text-align: center;
+    color: #2F5791;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10pt;
+    margin: 0px auto;
+}
+    .nav-form-link:hover {
+        color: #CC6666;
+        text-decoration: none;
+    }
+
+    .nav-form-link img {
+        height: 45px;
+        max-height: 45px;
+    }
+
+/*熱搜關鍵字*/
+@media screen and (min-width: 992px) {
+    .hotsearch {
+        max-height: 24px;
+    }
+}
+.hotsearch {
+    background-color: #E6E6E6;
+    font-size: 12pt;
+    color: #CC6666;
+}
+    .hotsearch a {
+        color: #CC6666;
+        word-break: keep-all;
+    }
+/*防詐騙*/
+.warn-bilk {
+    background-color: #C1272D;
+    font-size: 12pt;
+    color: #FFFF00;
+    font-weight:bolder;
+}
+/*Banner區塊*/
+.bn-box{
+    padding-bottom:10px;
+}
+
+/*其他資訊 按鈕、區塊*/
+@media screen and (max-width: 991px) {
+    .nav-tabs .nav-item {
+        width:20%;
+    }
+    .nav-tabs .nav-item a{
+       font-size:10pt;
+    }
+    .nav-tabs .nav-link.active,
+    .nav-tabs .nav-item.show .nav-link {
+        font-size: 9pt;
+    }
+    .nav-link {
+        padding: 5px 5px;
+    }
+}
+/*折扣顯示*/
+.work-bottom {
+    position: absolute;
+}
+    .work-bottom .big-link {
+        /* display: inline-block;
+        padding: 5px 20px;
+        background: #fe503e;
+        background-color: rgba(300, -102, 0, .5);
+        color: #fff;
+        font-style: italic;
+        text-decoration: none;
+        -moz-box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+        -webkit-box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+        box-shadow: 0 1px 25px 0 rgba(0,0,0,.05) inset, 0 -1px 25px 0 rgba(0,0,0,.05) inset;
+        transform: rotate(-40deg);
+           */
+        display: inline-block;
+        box-sizing: border-box;
+        line-height: 1.2;
+        font-size: 14px;
+        font-weight: bolder;
+        color: #fff;
+        background: linear-gradient(135deg, rgba(300, -102, 0, .5) 50%, transparent 0);
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-bottom: 4px;
+        background: linear-gradient(114deg, rgba(300, -102, 0, .5) calc(100% - 8px), transparent 0);
+    }
+.price_red{
+    color:red;
+}
+/*購物車按鈕*/
+.button {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 3px 23px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    background: #ffffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dbdbdb));
+    background: -moz-linear-gradient(top, #ffffff, #dbdbdb);
+    background: linear-gradient(to bottom, #ffffff, #dbdbdb);
+    font: normal normal bold 12px arial;
+    color: #000000;
+    text-decoration: none;
+}
+
+    .button:hover,
+    .button:focus {
+        background: #ffffff;
+        background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ffffff));
+        background: -moz-linear-gradient(top, #ffffff, #ffffff);
+        background: linear-gradient(to bottom, #ffffff, #ffffff);
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .button:active {
+        background: #999999;
+        background: -webkit-gradient(linear, left top, left bottom, from(#999999), to(#dbdbdb));
+        background: -moz-linear-gradient(top, #999999, #dbdbdb);
+        background: linear-gradient(to bottom, #999999, #dbdbdb);
+    }
+
+    .button:before {
+        content: "\0000a0";
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        line-height: 24px;
+        margin: 0 4px -6px -4px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcUlEQVRIibXVsWqbMRAH8J9NCMZDh0IyhFBC0nbIEFo6ZerQLUOXhrxC3iCvUPoUpW9TKGToEkIK9lA6JaUYksEYp8MngZA/uXJt/0F8991J97876aQOutaI6HxasE9XIecZdFcpd4IwTZT9LIoHSyASRPQxSEhu8QKTZQliBht4H76vcYEt/DababVcOkWv8IijFlv1HnSTn3z8DBHstdjUyukxjSP+jzSl2cv0C8kbZhGNY/zCMb63zMtxiDc4lxyKSFDahyH28ayC4AN6IcCqEk0DwXaFc3iOy9xPW+Rpuw/wVDnDiB528S33k+5Bm5MhnoR54zlEB8F2mc9JCdqaZRi+b/GnGH/TMyP8yP3knZxjGzdZICV8xbtcmRKU0u8X9DkmmjLOoOa6fonPOE30m/iEj0Eura160b5o7qX7RHcSdI9BLmLefRTHGe4CUdTt4BpXQS6trX7RelkwNKXZLMxfqET/jX812kqw1kf/L/jUWu59TXV1AAAAAElFTkSuQmCC") no-repeat left center transparent;
+        background-size: 100% 100%;
+    }
+
+    /*考情文章*/
+.table-cell {
+    display: table-cell;
+}
+.item_box {
+    background: #fff;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+    margin: 20px 0px;
+    padding: 10px;
+}
+
+.item_name {
+    font-family: 'wt014',Microsoft JhengHei;
+    font-weight: bolder;
+    font-size: 15pt;
+}
+.item_name a {
+    color: #0dbbc9;
+    word-break:break-word;
+}
+.item_des {
+    text-align: justify;
+    font-size: 12pt;
+    color: #4D4D4D;
+}
+
+.item_img {
+    width: 100%;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+    .item_img img {
+        width: 100%;
+    }
+
+
+
+
+    /*網頁底線*/
+.footer-hr {
+    border-top: 2px solid #2F5791;
+}
+@media screen and (min-width: 992px) {
+    .headerdivider {
+        border-left: 1px solid #999999;
+        background: #999999;
+        width: 1px;
+        height: 180px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
+.footer-center {
+    margin: 0px auto;
+}
+.footer-box {
+    margin: 0px auto;
+}
+.menu-footer{
+    padding-left:0px;
+}
+.menu-footer li {
+    list-style: none;
+    font-size:10pt;
+    color:#999999;
+}
+.menu-footer li > a{
+    color: #999999;
+}
+    .menu-footer li > a:hover {
+        color: #CC6666;
+    }
+.title-footer{
+    font-size:13pt;
+    font-weight:bolder;
+    color:#2F5791;
+}
