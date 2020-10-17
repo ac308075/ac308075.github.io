@@ -258,6 +258,10 @@ body {
     display: inline-flex;
     white-space: nowrap;
 }
+.memer-box {
+    display: inline-flex;
+    white-space: nowrap;
+}
 @media screen and (max-width: 991px) {
     .search-box {
         width: 100%;
@@ -282,6 +286,71 @@ body {
         height: 45px;
         max-height: 45px;
     }
+/*會員登入*/
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content{
+    padding:20px;
+}
+.close {
+    color: #161616;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 0;
+    margin-right: 10px;
+    cursor: pointer;
+}
+.member_title {
+    position: relative;
+    padding: 0 0 5pt 0.7em;
+    border-bottom: 1px solid #2F5791;
+    color: #2F5791;
+    font-size: 20pt;
+    font-weight: bolder;
+    margin-right:25px;
+}
+    .member_title::after {
+        position: absolute;
+        top: 0.1em;
+        left: 0;
+        content: '';
+        width: 5px;
+        height: 1.2em;
+        background-color: #2F5791;
+    }
+    .loginbtn {
+        float: right;
+    }
+.join_member{
+    text-align:center;
+    margin:50px auto;
+}
+    .join_member ul > li {
+        list-style: none;
+    }
+
+@media screen and (min-width: 768px) {
+    .headerdivider2 {
+        border-left: 1px solid #999999;
+        background: #999999;
+        width: 1px;
+        height: 180px;
+        margin-left: 10px;
+        margin-right: 10px;
+        position:absolute;
+    }
+}
 
 /*熱搜關鍵字*/
 @media screen and (min-width: 992px) {
@@ -484,4 +553,232 @@ body {
     font-size:13pt;
     font-weight:bolder;
     color:#2F5791;
+}
+
+/*麵包屑*/
+.breadcrumbs_box{
+    margin-bottom:5px;
+}
+.breadcrumbs_title {
+    position: relative;
+    padding: 0 0 1pt 0.7em;
+    color: #AD5E0E;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+.cont_breadcrumbs > ul > li {
+    position: relative;
+    float: left;
+    transform: skewX(-15deg);
+    background-color: #fff;
+    box-shadow: -2px 0px 20px -6px rgba(0,0,0,0.5);
+    z-index: 1;
+    width: auto;
+    margin-left: -20px;
+    transition: all 0.5s;
+    list-style: none;
+}
+
+    .cont_breadcrumbs > ul > li > a {
+        display: block;
+        padding: 5px;
+        font-size: 14px;
+        transform: skewX(15deg);
+        text-decoration: none;
+        color: #444;
+        font-weight: 300;
+    }
+
+    .cont_breadcrumbs > ul > li:first-child {
+        margin-left: -20px;
+    }
+
+    .cont_breadcrumbs > ul > li:hover {
+        background-color: #CFD8DC;
+    }
+
+    .cont_breadcrumbs > ul > li:last-child {
+        background-color: #2F5791;
+    }
+
+        .cont_breadcrumbs > ul > li:last-child > a {
+            color: #fff;
+        }
+
+
+.cont_breadcrumbs > ul:hover > li {
+    margin-left: 0px;
+}
+
+/*分頁頁碼*/
+.pages-view {
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;
+    padding: 5px;
+    margin-bottom:5px;
+}
+.page-nav-item {
+    display: inline;
+}
+.view-categories {
+    left: 0px
+}
+.page-nav {
+    position:absolute;
+    right: 0px
+}
+.page-nav > .page-nav-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    color: #333;
+    display: inline-block;
+    float: left;
+    height: 33px;
+    line-height: 31px;
+    margin-left: 5px;
+    text-align: center;
+    width: 33px;
+    cursor: pointer;
+}
+    .page-nav > .page-nav-item:hover, .page-nav > .page-nav-item.active {
+        color: #2F5791;
+    }
+.click-grid {
+    background-color: #b0b0b0;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    width: 31px;
+    margin-right: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 31px;
+    text-align: center;
+}
+.click-list {
+    background-color: #b0b0b0;
+    border-radius: 3px;
+    color: #333;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    height: 31px;
+    line-height: 31px;
+    text-align: center;
+    width: 31px;
+    margin-right: 7px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 31px;
+    text-align: center;
+}
+    .click-grid:hover, .view-categories > .click-grid.color-active, .click-list:hover, .view-categories > .click-list.color-active {
+        background-color: #2F5791;
+        color: #fff;
+    }
+
+    /*產品列左側分類*/
+.shop_box {
+    border: 1px solid #999999;
+    padding:10px;
+    margin-bottom:5px;
+    border-radius:5px;
+}
+.shop_box li{
+    list-style:none;
+}
+    .shop_box a {
+        text-decoration: none;
+    }
+.shop_box div>ul>li a{
+    color: black;
+    font-size:12pt;
+}
+.shop_subject {
+    position: relative;
+    padding: 0 0 1pt 0.7em;
+    border-bottom: 1px solid #2F5791;
+    color: #2F5791;
+    font-size: 15pt;
+    font-weight: bolder;
+}
+@media screen and (min-width: 992px) {
+    .shop_subject {
+        pointer-events: none;
+        cursor: default;
+    }
+    .shop_box .collapse{
+        display:block;
+    }
+}
+@media screen and (max-width: 991px) {
+    .shop_subject {
+        cursor: pointer;
+    }
+    .arrow_down {
+        display: inline-block;
+        border-right: 5px solid;
+        border-bottom: 5px solid;
+        width: 15px;
+        height: 15px;
+        margin-bottom:3px;
+        transform: rotate(45deg);
+    }
+}
+.shop_box div > ul > li :hover {
+    color: #AD5E0E;
+}
+.shop_box div > ul > li .active {
+    color: #AD5E0E;
+}
+    /*產品列*/
+    .products-categories {
+        display: inline-block;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+.product-box {
+    float: left;
+    min-height: 1px;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    position: relative;
+    display: table-cell;
+}
+.img-product{
+    max-height:207px;
+    max-width:175px;
+    margin:0 auto;
+}
+.img-product img{
+    width:100%;
+}
+.product-box-content {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding:5px;
+}
+.product-box-change {
+    display: flex;
+    flex-wrap: wrap;
+}
+.product-box-text p {
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+.product-box-bottom{
+    margin:0 auto !important;
+}
+.product-name {
+    font-size: 14px;
+    color: #4D4D4D;
+}
+.product-box-text a:hover {
+    color: #AD5E0E;
+    text-decoration: none;
 }
