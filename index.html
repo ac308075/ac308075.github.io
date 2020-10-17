@@ -284,7 +284,7 @@
                             <input class="form-control mr-sm-2" type="search" placeholder="書號、書名、作者、ISBN、商品分類" aria-label="Search" />
                         </div>
                         <div class="memer-box">
-                            <a class="nav-form-link" href="#"><img class="nav-form-link" src="img/會員.png" /><br />會員登入 </a>
+                            <a id="myBtn" class="nav-form-link" href="#"><img class="nav-form-link" src="img/會員.png" /><br />會員登入 </a>
                             <a class="nav-form-link" href="#"><img class="nav-form-link" src="img/購物車.png" /><br />購物車(0) </a>
                             <a class="nav-form-link" href="#"><img class="nav-form-link" src="img/訂單查詢.png" /><br />訂單查詢 </a>
                         </div>
@@ -294,6 +294,60 @@
         </div>
     </nav>
     <!--navbar end-->
+    <!--會員登入/註冊 Start-->
+    <div id="myModal" class="modal">
+        <div class="container">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">×</span>
+                <h2 class="member_title">會員登入</h2>
+                <hr />
+                <div class="row">
+                    <div class="dialog-form col-md-6">
+                        <div onkeypress="javascript:return WebForm_FireDefaultButton(event, 'LoginButton')">
+
+                            <div class="form-group">
+                                <label>身份證字號 或 帳號</label>
+                                <input name="AccountNumber" type="text" id="AccountNumber" class="form-control" placeholder="公職王會員帳號" />
+                            </div>
+                            <div class="form-group">
+                                <label>密碼</label>
+                                <input name="Password" type="password" id="Password" class="form-control" placeholder="公職王會員密碼" />
+                            </div>
+                            <input type="submit" name="LoginButton" value="登入" id="LoginButton" class="btn btn-primary loginbtn" />
+
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="headerdivider2"></div>
+                        <div class="join_member">
+                            <a class="popup-text" href="https://www.public.com.tw/Member" target="_blank" data-effect="mfp-zoom-out">申請公職王會員</a>
+                            <br />
+                            <a class="popup-text" href="https://www.public.com.tw/member-getpassword" target="_blank" data-effect="mfp-zoom-out">忘記密碼</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        // When the user clicks the button, open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+    <!--會員登入/註冊 end-->
     <!--熱搜關鍵字 start-->
     <div class="hotsearch text-center">
         <span>熱搜關鍵字：</span>
