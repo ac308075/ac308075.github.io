@@ -258,9 +258,10 @@ body {
     display: inline-flex;
     white-space: nowrap;
 }
-.memer-box {
+.member-box{
     display: inline-flex;
     white-space: nowrap;
+    margin:0px auto;
 }
 @media screen and (max-width: 991px) {
     .search-box {
@@ -565,6 +566,9 @@ body {
     color: #AD5E0E;
     font-size: 15pt;
     font-weight: bolder;
+}
+.cont_breadcrumbs{
+    margin-left:-20px;
 }
 .cont_breadcrumbs > ul > li {
     position: relative;
