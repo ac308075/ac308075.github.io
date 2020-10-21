@@ -619,13 +619,14 @@ body {
     border-top: 1px solid #999999;
     border-bottom: 1px solid #999999;
     padding: 5px;
-    margin-bottom:5px;
+    margin-bottom: 5px;
 }
 .page-nav-item {
     display: inline;
 }
 .view-categories {
-    left: 0px
+    left: 0px;
+    margin-left: -5px;
 }
 .page-nav {
     position:absolute;
