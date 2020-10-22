@@ -444,7 +444,37 @@ body {
     color: #000000;
     text-decoration: none;
 }
+.cart-button {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color: #FBB03B;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+    width: 120px;
+}
+    .cart-button:hover {
+        color: #AD5E0E;
+        text-decoration: none;
+    }
+.buy-button {
+    display: inline-block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 6px 10px;
+    background-color: #C1272D;
+    color: white;
+    font-size: 14px;
+    margin-bottom: 5px;
+    width: 120px;
+}
 
+    .buy-button:hover {
+        color: #AD5E0E;
+        text-decoration: none;
+    }
     .button:hover,
     .button:focus {
         background: #ffffff;
@@ -462,7 +492,7 @@ body {
         background: linear-gradient(to bottom, #999999, #dbdbdb);
     }
 
-    .button:before {
+.button:before {
         content: "\0000a0";
         display: inline-block;
         height: 24px;
@@ -616,8 +646,8 @@ body {
 
 /*分頁頁碼*/
 .pages-view {
-    border-top: 1px solid #999999;
-    border-bottom: 1px solid #999999;
+    /*border-top: 1px solid #999999;
+    border-bottom: 1px solid #999999;*/
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -786,4 +816,208 @@ body {
 .product-box-text a:hover {
     color: #AD5E0E;
     text-decoration: none;
+}
+
+/*函授優惠看板標題*/
+.pack_super {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #b95749;
+    border-color: #b95749;
+    font-weight: bolder;
+    font-size: 25pt;
+}
+.pack_gd {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #8E9307;
+    border-color: #8E9307;
+    font-weight: bolder;
+    font-size: 25pt;
+}
+.pack_high {
+    position: relative;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    color: #FFF;
+    background-color: #82abac;
+    border-color: #82abac;
+    font-weight: bolder;
+    font-size: 25pt;
+}
+/*函授優惠看板表格*/
+.rwd-table {
+    border-collapse: collapse;
+}
+
+    .rwd-table th {
+        text-align: center;
+        white-space: nowrap;
+        background: #e6e6e6;
+        color: #504d4c;
+    }
+    .rwd-table th, td {
+        padding: 10px;
+    }
+    .rwd-table th:nth-child(1), td:nth-child(1) {
+        color: #fb5b05;
+    }
+    .table_active {
+        background-color: #fef2da;
+    }
+@media screen and (min-width: 452px) {
+    .rwd-table td:nth-child(1), td:nth-child(2) {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 451px) {
+    .rwd-table th {
+        display: none;
+    }
+    .rwd-table tr {
+        border:1px solid #999999;
+    }
+    .rwd-table td {
+        display: block;
+        border: none;
+        text-align: left;
+        padding: 0;
+        margin: 5px 5px;
+    }
+        .rwd-table td:before {
+            content: attr(data-th) ":";
+            display: inline-block;
+            flex-shrink: 0;
+            font-weight: bold;
+            width: 100%;
+            background: #e6e6e6;
+            color: #504d4c;
+            margin-right: 10px;
+            padding: 2px 10px;
+        }
+}
+
+/*產品頁購物車*/
+.sns{
+    white-space:nowrap;
+}
+.cart_box {
+    padding: 7px 20px;
+    border-radius: 6px;
+    background-color: #E6E6E6;
+}
+    .cart_box .quanlity-product {
+        padding: 10px;
+        margin: 0 auto;
+        background-color: #e8e8e8;
+    }
+    .cart_box .buttons_added {
+        float: right;
+        height: 33px;
+        position: relative;
+    }
+    .cart_box span {
+        color: #C1272D;
+        line-height: 32px;
+    }
+@media screen and (min-width: 768px) {
+    .cart_box {
+        width: 160px;
+    }
+    .cart_box .quanlity-product {
+        width: 140px;
+    }
+    .cart_box .buttons_added {
+        width: 60px;
+    }
+    .cart_box .buttons_added .minus {
+        bottom: 1px;
+    }
+
+    .cart_box .buttons_added .plus {
+        bottom: 50%;
+    }
+
+    .cart_box .buttons_added a {
+        background-color: #333;
+        border: medium none;
+        color: #fff;
+        line-height: 12px;
+        position: absolute;
+        padding-top: 2px;
+        right: 5px;
+        width: 15px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .cart_box {
+        width: 100%;
+    }
+    .cart_box .quanlity-product {
+        width: 160px;
+    }
+        .cart_box .buttons_added a {
+            border: 1px solid #2F5791;
+            border-radius:2px;
+            color: #2F5791;
+            padding:2px;
+        }
+
+}
+/*產品頁圖*/
+.product_img{
+    max-height:400px;
+    max-width:330px;
+    margin:0 auto;
+}
+@media screen and (min-width: 768px) {
+    .product_img {
+        border-right: 1px solid #999999
+    }
+}
+/*產品頁 產品資訊*/
+.product_title{
+    font-size:14pt;
+    font-weight:bolder;
+    color:#333333;
+}
+.product_detailed {
+    font-size: 13pt;
+    color: #333333;
+}
+/*內容介紹、試讀檔案*/
+.product_des {
+    margin-top: 10px;
+}
+.product_des_tabs{
+    padding:0px !important; 
+}
+.product_des_content{
+    padding:10px;
+}
+@media screen and (min-width: 992px) {
+    .product_des_nav {
+        display: block !important;
+    }
+}
+@media screen and (max-width: 991px) {
+    .product_des_nav .nav-item {
+        width: 30%;
+    }
+
+        .product_des_nav .nav-item a {
+            font-size: 12pt;
+        }
+
+        .product_des_nav .nav-link.active,
+        .product_des_nav .nav-item.show .nav-link {
+            font-size: 12pt;
+        }
 }
